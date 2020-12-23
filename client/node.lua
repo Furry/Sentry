@@ -7,8 +7,7 @@ else
 end
 
 for k, v in pairs(sensor.getPlayers()) do
-    --print(k, v[0])
     for k1, v1 in pairs(v) do
-        print("-", k, "=", v)
+        print("-", k, "=", v[0])
     end
 end
