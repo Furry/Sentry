@@ -1,6 +1,11 @@
-print("Beginning setup sequence...")
-if peripheral.isPresent("right") == false then
-    error("No sensor found on right side.")
+local sensor = peripheral.find("openperipheral_sensor")
+if sensor == nil then
+    error("No sensor found!")
+    exit()
+else
+    print("Sensor Found!")
 end
 
-print("Startup Successful!")
+for k, v in pairs(sensor.getPlayers()) do
+    print(k, v)
+end
