@@ -388,7 +388,7 @@ while true do
         os.sleep(5)
     else
         for k, v in pairs(table) do
-            data = sensor.getPlayerByName(v["name"]).all()
+            data = sensor.getPlayerByName("TotallyNotHusky").all()
             json.encode(data)
             print(data)
         end
