@@ -382,8 +382,6 @@ else
     print("Sensor Found!")
 end
 
-table.foreach(tbl, function (i, b) if type(b) == "function" then table.remove(tbl, tbl[i]) end)
-
 while true do
     players = sensor.getPlayers()
     if getTableLength(players) == 0 then
