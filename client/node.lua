@@ -21,17 +21,17 @@ if fs.exists("storage") == false then -- We know this is a fresh startup
     print("Y: "); y = tonumber(read())
     print("Z: "); z = tonumber(read())
 
-    xf = fs.open("x", "rw")
-    yf = fs.open("y", "rw")
-    zf = fs.open("z", "rw")
+    xf = fs.open("x", "wa")
+    yf = fs.open("y", "wa")
+    zf = fs.open("z", "wa")
 
     xf.write(x)
     yf.write(y)
     zf.write(z)
 else
-    x = tonumber(fs.open("x", "rw").readAll())
-    y = tonumber(fs.open("y", "rw").readAll())
-    z = tonumber(fs.open("z", "rw").readAll())
+    x = tonumber(fs.open("x", "r").readAll())
+    y = tonumber(fs.open("y", "r").readAll())
+    z = tonumber(fs.open("z", "r").readAll())
 
 end
 
